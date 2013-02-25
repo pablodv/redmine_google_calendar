@@ -1,0 +1,1 @@
+get 'google_calendar', :to => 'google_calendar#show'
