@@ -22,12 +22,6 @@ class GoogleCalendarController < ApplicationController
   end
 
 private
-  def find_project
-    @project = Project.find(params[:id])
-  rescue ActiveRecord::RecordNotFound
-    render_404
-  end
-
   def tzinfo_from_offset(offset_in_seconds)
     #Search For US Timezones First
     us = TZInfo::Country.get('US')
